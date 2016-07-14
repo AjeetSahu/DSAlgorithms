@@ -54,10 +54,10 @@ public class ReverseLinkedList {
 		ll.addNodeFront(2);
 		ll.addNodeFront(1);
 		ReverseLinkedList rll = new ReverseLinkedList();
-		rll.printLL(ll.header);
+		rll.printLL(ll.head);
 		//rll.recurReverse(ll.header, ll.header);
-		rll.reverseLL(ll.header);
-		rll.printLL(ll.header);
+		rll.reverseLL(ll.head);
+		rll.printLL(ll.head);
 	}
 
 }

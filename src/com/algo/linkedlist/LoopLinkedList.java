@@ -14,7 +14,7 @@ public class LoopLinkedList {
 	
 	public result findLoop(MyLinkedList ll){
 		HashMap<LLNode,Integer> hm = new HashMap<LLNode,Integer>();
-		LLNode temp = ll.header;
+		LLNode temp = ll.head;
 		int count = 0;
 		while(temp != null){
 			if(hm.containsKey(temp)){

@@ -2,25 +2,25 @@ package com.algo.linkedlist;
 
 public class MyLinkedList {
 
-	public LLNode header;
+	public LLNode head;
 	
 	public MyLinkedList(){
-		header = null;
+		head = null;
 	}
 	
 	public void addNodeFront(int data){
 		LLNode node = new LLNode(data);
-		node.setNext(header);
-		header = node;
+		node.setNext(head);
+		head = node;
 	}
 	
 	public void addNodeEnd(int data){
 		LLNode node = new LLNode(data);
-		if(header == null){
-			header = node;
+		if(head == null){
+			head = node;
 		}
 		else{
-			LLNode temp = header;
+			LLNode temp = head;
 			while(temp.getNext() != null){
 				temp = temp.getNext();
 			}
@@ -30,11 +30,11 @@ public class MyLinkedList {
 	
 	public void addNodeAfter(int value, int data){
 		LLNode node = new LLNode(data);
-		if(header == null){
-			header = node;
+		if(head == null){
+			head = node;
 		}
 		else{
-			LLNode temp = header;
+			LLNode temp = head;
 			while(temp.getNext()!= null && temp.getData() != value){
 				temp = temp.getNext();
 			}
@@ -44,20 +44,20 @@ public class MyLinkedList {
 	}
 	
 	public void deleteNodeFront(){
-		if(header == null){
+		if(head == null){
 			System.out.println("List is empty");
 		}
 		else{
-			header = header.getNext();
+			head = head.getNext();
 		}
 	}
 	
 	public void deleteNodeEnd(){
-		if(header == null){
+		if(head == null){
 			System.out.println("List is empty");
 		}
 		else{
-			LLNode temp = header;
+			LLNode temp = head;
 			LLNode prev = null;
 			while(temp.getNext() != null){
 				prev = temp;
@@ -68,12 +68,12 @@ public class MyLinkedList {
 	}
 	
 	public void deleteNode(int data){
-		if(header == null){
+		if(head == null){
 			System.out.println("List is empty");
 		}
 		else{
-			LLNode temp = header;
-			LLNode prev = header;
+			LLNode temp = head;
+			LLNode prev = head;
 			while(temp.getData() != data){
 				prev = temp;
 				temp = temp.getNext();
@@ -83,7 +83,7 @@ public class MyLinkedList {
 	}
 	
 	public void makeLoop(int data){			
-		LLNode temp = header;
+		LLNode temp = head;
 		LLNode dataNode = null;
 		while(temp.getNext() != null){
 			if(temp.getData() == data){
@@ -95,7 +95,7 @@ public class MyLinkedList {
 	}
 	
 	public void print(){
-		LLNode temp = header;
+		LLNode temp = head;
 		while(temp != null){
 			System.out.print(temp.getData() + " ");
 			temp = temp.getNext();

@@ -17,7 +17,7 @@ public class NthFromEnd {
 	
 	// recursive solution 
 	public static int count = 0;
-	public static LLNode nthRecursive(LLNode head, int n){
+	public static void nthRecursive(LLNode head, int n){
 		if(head != null){
 			nthRecursive(head.getNext(), n);
 			count++;
@@ -25,7 +25,6 @@ public class NthFromEnd {
 				System.out.println(head.getData());
 			}
 		}
-		return null;
 	}
 	
 	public static void main(String[] args) {
@@ -38,9 +37,10 @@ public class NthFromEnd {
 		ll.addNodeAfter(7, 8);
 		ll.addNodeEnd(11);
 		ll.print();
-		//LLNode node = nthNode(ll.header, 8);
-		LLNode node = nthRecursive(ll.header, 8);
-		System.out.println("nth node from end is");
-		//System.out.println(node);
+		LLNode node = nthNode(ll.head, 5);
+		System.out.print("nth node from end is ");
+		System.out.println(node.getData());
+		nthRecursive(ll.head, 4);
+		
 	}
 }

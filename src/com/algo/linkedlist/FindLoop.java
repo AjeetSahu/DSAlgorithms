@@ -25,7 +25,7 @@ public class FindLoop {
 		ll.addNodeAfter(7, 8);
 		ll.addNodeEnd(11);
 		ll.makeLoop(9);
-		boolean result = isCircular(ll.header);
+		boolean result = isCircular(ll.head);
 		System.out.println(result);
 	}
 
