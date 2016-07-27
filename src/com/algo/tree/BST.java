@@ -68,9 +68,9 @@ public class BST {
 		while(!q.isEmpty()){
 			System.out.println(q.peek().getData());
 			if(q.peek().getLeft() != null)
-			q.add(q.peek().getLeft());
+				q.add(q.peek().getLeft());
 			if(q.peek().getRight() != null)
-			q.add(q.peek().getRight());
+				q.add(q.peek().getRight());
 			q.poll();
 		}
 	}
@@ -90,6 +90,8 @@ public class BST {
 		bst.addNode(7);
 		bst.addNode(16);
 		bst.addNode(23);
-		bst.inOrderTraversal(bst.root);
+		//bst.inOrderTraversal(bst.root);
+		bst.levelOrderTraversal(bst.root);
+		
 	}
 }
