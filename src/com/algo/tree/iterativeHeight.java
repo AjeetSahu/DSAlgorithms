@@ -8,7 +8,7 @@ import java.util.Queue;
  * @author Ajeet
  *
  */
-public class iterativeHeight {
+public class IterativeHeight {
 
 	/**
 	 * BinaryTreeNode object
@@ -54,7 +54,7 @@ public class iterativeHeight {
 		bt.addNode(9);
 		bt.addNode(10);
 		bt.inOrderTraversal(bt.root);
-		iterativeHeight obj = new iterativeHeight();
+		IterativeHeight obj = new IterativeHeight();
 		int height = obj.findHeight(bt.root);
 		System.out.println("Height of binary tree is " + height);
 

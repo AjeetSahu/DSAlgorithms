@@ -9,7 +9,7 @@ package com.algo.tree;
  */
 
 
-public class recursiveHeight {
+public class RecursiveHeight {
 
 	/**
 	 * Finds height of a given binary tree
@@ -38,7 +38,7 @@ public class recursiveHeight {
 		bt.addNode(9);
 		bt.addNode(10);
 		bt.inOrderTraversal(bt.root);
-		recursiveHeight obj = new recursiveHeight();
+		RecursiveHeight obj = new RecursiveHeight();
 		int height = obj.findHeight(bt.root);
 		System.out.println("Height of binary tree is " + height);
 	}

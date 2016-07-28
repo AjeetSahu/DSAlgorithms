@@ -18,9 +18,11 @@ public class PathWithSum {
 			return false;
 		}
 		if(root.getLeft() == null && root.getRight() == null && root.getData() == sum){
+			System.out.print(root.getData() + " ");
 			return true;
 		}
 		if(checkPath(root.getLeft(), sum-root.getData()) || checkPath(root.getRight(), sum-root.getData())){
+			System.out.print(root.getData() + " ");
 			return true;
 		}
 		return false;
@@ -38,7 +40,9 @@ public class PathWithSum {
 		bt.addNode(8);
 		bt.addNode(9);
 		bt.addNode(10);
-
+		PathWithSum obj = new PathWithSum();
+		boolean result = obj.checkPath(bt.root, 8);
+		System.out.println(result);
 	}
 
 }
